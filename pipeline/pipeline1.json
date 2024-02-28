@@ -10,7 +10,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "soucedataloc",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcefilename": {
+								"value": "@variables('sourcefile1')",
+								"type": "Expression"
+							}
+						}
 					},
 					"timeout": "00:05:00",
 					"sleep": 60
@@ -38,7 +44,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "soucedataloc",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcefilename": {
+								"value": "@variables('sourcefile1')",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"columnCount"
@@ -122,13 +134,25 @@
 							"inputs": [
 								{
 									"referenceName": "soucedataloc",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"sourcefilename": {
+											"value": "@variables('sourcefile1')",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "ADLSdisloc",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"distinafilename": {
+											"value": "@variables('disfile1')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -136,6 +160,16 @@
 				}
 			}
 		],
+		"variables": {
+			"sourcefile1": {
+				"type": "String",
+				"defaultValue": "population_by_age.tsv.zip"
+			},
+			"disfile1": {
+				"type": "String",
+				"defaultValue": "covid123.tsv"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2024-02-28T11:13:45Z"
 	},

@@ -5,12 +5,20 @@
 			"referenceName": "distina_loc",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"distinafilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "new.tsv",
+				"fileName": {
+					"value": "@dataset().distinafilename",
+					"type": "Expression"
+				},
 				"fileSystem": "dis-f"
 			},
 			"columnDelimiter": "\t",
