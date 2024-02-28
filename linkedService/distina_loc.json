@@ -1,0 +1,11 @@
+{
+	"name": "distina_loc",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://datalae.dfs.core.windows.net/"
+		}
+	}
+}

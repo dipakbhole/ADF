@@ -1,0 +1,25 @@
+{
+	"name": "soucedataloc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "source_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "population_by_age.tsv.zip",
+				"container": "source-d"
+			},
+			"columnDelimiter": "\t",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

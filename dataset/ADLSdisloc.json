@@ -1,0 +1,24 @@
+{
+	"name": "ADLSdisloc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "distina_loc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "new.tsv",
+				"fileSystem": "dis-f"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
