@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "EUScapDF01"
+		},
+		"distina_loc_properties_typeProperties_url": {
+			"value": "https://datalae.dfs.core.windows.net/"
+		},
+		"source_data_properties_typeProperties_serviceEndpoint": {
+			"value": "https://adfcopyprac.blob.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
